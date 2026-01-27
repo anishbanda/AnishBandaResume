@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Resume — Anish Banda" />
+  <title>Anish Banda — Resume</title>
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --rule:#e5e7eb;
+      --accent:#111827;
+      --max: 900px;
+    }
+
+    /* Base */
+    html,body{background:var(--bg); color:var(--text); margin:0; padding:0;}
+    body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+         line-height:1.35; font-size:16px;}
+    a{color:var(--accent); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:32px 20px 56px;}
+    .top{display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:12px;}
+    h1{font-size:34px; margin:0;}
+    .contact{display:flex; flex-wrap:wrap; gap:10px 16px; color:var(--muted); font-size:14px;}
+    .contact span{white-space:nowrap;}
+    .subline{color:var(--muted); font-size:14px; margin-top:6px;}
+
+    /* Sections */
+    section{margin-top:22px;}
+    .sec-title{
+      display:flex; align-items:center; gap:12px;
+      font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+      margin:18px 0 10px;
+      color:var(--muted);
+    }
+    .sec-title::after{content:""; flex:1; height:1px; background:var(--rule);}
+
+    .item{margin:10px 0 14px;}
+    .item-head{
+      display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px;
+      margin-bottom:4px;
+    }
+    .item-head .left{font-weight:600;}
+    .item-head .right{color:var(--muted); font-size:14px; white-space:nowrap;}
+    .item-sub{color:var(--muted); font-size:14px; margin-bottom:6px;}
+    ul{margin:6px 0 0 18px; padding:0;}
+    li{margin:4px 0;}
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
+    .pill{border:1px solid var(--rule); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted);}
+
+    /* Two-column helpers (optional) */
+    .grid2{display:grid; grid-template-columns:1fr; gap:14px;}
+    @media (min-width: 860px){
+      .grid2{grid-template-columns:1fr 1fr;}
+    }
+
+    /* Print */
+    @media print{
+      .wrap{padding:0; margin:0; max-width:none;}
+      a{text-decoration:none;}
+      .sec-title{color:#111;}
+      .sec-title::after{background:#ddd;}
+      body{font-size:12px;}
+      h1{font-size:22px;}
+      .contact{font-size:11px;}
+      .item-head .right, .item-sub, .subline, .pill{font-size:11px;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div>
+        <h1>Anish Banda</h1>
+        <div class="subline">
+          Cumming, GA 30040 • Athens, GA 30606
+        </div>
+      </div>
+
+      <div class="contact" aria-label="Contact information">
+        <span><a href="tel:+14705054338">(470) 505-4338</a></span>
+        <span><a href="mailto:bandaanish@gmail.com">bandaanish@gmail.com</a></span>
+        <span><a href="https://linkedin.com/in/anishbanda" rel="noopener" target="_blank">linkedin.com/in/anishbanda</a></span>
+        <span><a href="https://github.com/anishbanda" rel="noopener" target="_blank">github.com/anishbanda</a></span>
+      </div>
+    </header>
+
+    <section>
+      <div class="sec-title">Education</div>
+      <div class="item">
+        <div class="item-head">
+          <div class="left">The University of Georgia — Athens, GA</div>
+          <div class="right">Aug 2024 – May 2028</div>
+        </div>
+        <div class="item-sub">
+          Majors: Computer Science and Mathematics (AI & Applied Mathematics) • GPA: 3.65/4.0
+        </div>
+        <ul>
+          <li><strong>Honors:</strong> Hope Scholarship, Charter Scholarship, Dean’s List</li>
+          <li><strong>Relevant Coursework:</strong> Data Structures, Linear Algebra, Multivariable Calculus, Intro to Computational Investing, Computer Architecture and Organization, Artificial Intelligence, Algorithms, Deep Learning and Generative AI</li>
+          <li><strong>Selected Participant:</strong> Goldman Sachs Engineering Possibilities Summit, SIG Discovery Day, BCG Launch</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Relevant Experience</div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">UltraRep LLC — Backend Software Engineering Intern (Remote)</div>
+          <div class="right">Jun 2025 – Aug 2025</div>
+        </div>
+        <div class="item-sub">Java • OpenAI • APIs • Redis</div>
+        <ul>
+          <li>Built a REST endpoint that ingested conversation JSON, called the OpenAI API to generate coaching feedback, and returned structured JSON reliably renderable by the frontend.</li>
+          <li>Added strict response validation (required fields + type checks) and error handling for timeouts and malformed/unexpected formats to prevent crashes from upstream output.</li>
+          <li>Wrote JUnit tests mocking the OpenAI client across success/failure paths (timeouts, non-200, missing fields) and ensured consistent fallback payloads (status=degraded, error_code, retryable, correlation id).</li>
+          <li>Debugged a production parsing failure caused by a response-shape change: captured raw logs, reproduced with a failing test, updated parsing/validation, and kept the regression test in CI.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">UGA Small Satellite Research Laboratory — Data Team Lead</div>
+          <div class="right">Sep 2024 – Present</div>
+        </div>
+        <div class="item-sub">Athens, GA</div>
+        <ul>
+          <li>Designed a data pipeline for a 512×512@20FPS microscope payload (onboard filtering → H.265 compression → downlink scheduling) to reduce expected downlink needs by &gt;75% within S-band/X-band limits.</li>
+          <li>Built simulation tools to estimate daily data volume and downlink gaps (~4.6 GB/day), guiding compression settings, frame thinning, and ground station usage.</li>
+          <li>Helped define the technical plan for a National Geographic livestream CubeSat (12U): composite video feed using H.265 at ~6–7 Mbps (720p30) over a 10 Mbps X-band link.</li>
+          <li>Led feasibility analysis for an interactive museum-style experience (1–3s latency, stable Earth pointing, ~60–70W streaming power), supporting up to $2M in potential funding.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">Hammerhead Construction — AI@UGA Software Engineer</div>
+          <div class="right">Apr 2025 – Present</div>
+        </div>
+        <div class="item-sub">Athens, GA • Python • AutoCAD</div>
+        <ul>
+          <li>Built a system that converts 2D blueprints into structured CAD geometry using shape detection, contour tracing, and graph-based region assembly, reducing manual redraw and speeding early design iterations.</li>
+          <li>Created a preprocessing pipeline to clean/normalize noisy drawings (artifact removal, structure inference), improving CAD generation reliability and runtime (days → hours on typical inputs).</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">UGA + Athens-Clarke County Water Treatment Facility — AI@UGA Software Engineer</div>
+          <div class="right">Apr 2025 – Present</div>
+        </div>
+        <div class="item-sub">Athens, GA • Sensor ML</div>
+        <ul>
+          <li>Built a feature pipeline for dissolved oxygen prediction from multivariate sensor streams, processing &gt;1M readings/day using SQL windowing and real-time aggregation.</li>
+          <li>Tuned models for low-power edge devices with quantization and pruning to reduce inference time on microcontrollers.</li>
+          <li>Added data quality checks and anomaly triggers to stabilize predictions during sensor noise and missing transmissions.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">SmartPhoneTrucker LLC — Software Development Intern</div>
+          <div class="right">Aug 2023 – Feb 2024</div>
+        </div>
+        <div class="item-sub">Suwanee, GA • React • JavaScript • HTML/CSS</div>
+        <ul>
+          <li>Stabilized three production React apps by profiling render performance, removing UI-blocking work, and fixing 300+ frontend exceptions.</li>
+          <li>Helped design mobile logistics app structure with modular components and clear domain boundaries to ship features faster with fewer rewrites.</li>
+          <li>Improved load performance by cleaning build/asset pipelines, reducing unnecessary JS and raising Lighthouse scores by 30%+ on slow mobile networks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Relevant Projects</div>
+
+      <div class="grid2">
+        <div class="item">
+          <div class="item-head">
+            <div class="left">2048 AI</div>
+            <div class="right">Feb 2025</div>
+          </div>
+          <div class="item-sub">Python • Pygame • NumPy</div>
+          <ul>
+            <li>Engineered a depth-limited Expectimax agent with transposition tables, probabilistic heuristics, and board-state memorization, achieving a 100% win rate.</li>
+            <li>Optimized evaluation bottlenecks to reduce per-move computation and enable real-time gameplay with deep search.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <div class="left">Blackjack Card Counting Trainer</div>
+            <div class="right">Jan 2025</div>
+          </div>
+          <div class="item-sub">TypeScript • React • Tailwind</div>
+          <ul>
+            <li>Built an interactive 4-deck blackjack game (208-card shoe) with splits, doubles, and bankroll tracking for realistic practice.</li>
+            <li>Added Hi/Lo counting (running + true count) and a tutorial mode that checks count and bet sizing after each round.</li>
+            <li>Tracked session stats (accuracy and profit/loss) to measure improvement.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Skills</div>
+      <div class="pillrow" aria-label="Skills list">
+        <span class="pill">Python</span>
+        <span class="pill">Java</span>
+        <span class="pill">C/C++</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">SQL</span>
+        <span class="pill">React</span>
+        <span class="pill">HTML/CSS</span>
+        <span class="pill">REST APIs</span>
+        <span class="pill">Redis</span>
+        <span class="pill">Git</span>
+        <span class="pill">Docker</span>
+        <span class="pill">scikit-learn</span>
+        <span class="pill">TensorFlow</span>
+        <span class="pill">PyTorch</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
