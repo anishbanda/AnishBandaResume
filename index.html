@@ -78,7 +78,7 @@
       <div>
         <h1>Anish Banda</h1>
         <div class="subline">
-          Cumming, GA 30040 • Athens, GA 30606
+          Cumming, GA 30040 • Athens, GA 30605
         </div>
       </div>
 
@@ -97,13 +97,11 @@
           <div class="left">The University of Georgia — Athens, GA</div>
           <div class="right">Aug 2024 – May 2028</div>
         </div>
-        <div class="item-sub">
-          Majors: Computer Science and Mathematics (AI & Applied Mathematics) • GPA: 3.65/4.0
-        </div>
         <ul>
-          <li><strong>Honors:</strong> Hope Scholarship, Charter Scholarship, Dean’s List</li>
-          <li><strong>Relevant Coursework:</strong> Data Structures, Linear Algebra, Multivariable Calculus, Intro to Computational Investing, Computer Architecture and Organization, Artificial Intelligence, Algorithms, Deep Learning and Generative AI</li>
-          <li><strong>Selected Participant:</strong> Goldman Sachs Engineering Possibilities Summit, SIG Discovery Day, BCG Launch</li>
+          <li><strong>Majors:</strong> Computer Science and Mathematics, Area of Emphasis in Artificial Intelligence and Applied Mathematics</li>
+          <li><strong>GPA:</strong> 3.7/4.0</li>
+          <li><strong>Honors:</strong> Hope Scholarship, Charter Scholarship, and Dean’s List</li>
+          <li><strong>Selected Participant:</strong> Goldman Sachs Engineering Possibilities Summit, SIG Discovery Day, and BCG Launch</li>
         </ul>
       </div>
     </section>
@@ -113,29 +111,60 @@
 
       <div class="item">
         <div class="item-head">
-          <div class="left">UltraRep LLC — Backend Software Engineering Intern (Remote)</div>
-          <div class="right">Jun 2025 – Aug 2025</div>
+          <div class="left">Fidelity Investments — Software Engineering Intern</div>
+          <div class="right">Jun 2026 – Present</div>
         </div>
-        <div class="item-sub">Java • OpenAI • APIs • Redis</div>
+        <div class="item-sub">Westlake, TX • Java • Spring/Spring Boot • APIs</div>
         <ul>
-          <li>Built a REST endpoint that ingested conversation JSON, called the OpenAI API to generate coaching feedback, and returned structured JSON reliably renderable by the frontend.</li>
-          <li>Added strict response validation (required fields + type checks) and error handling for timeouts and malformed/unexpected formats to prevent crashes from upstream output.</li>
-          <li>Wrote JUnit tests mocking the OpenAI client across success/failure paths (timeouts, non-200, missing fields) and ensured consistent fallback payloads (status=degraded, error_code, retryable, correlation id).</li>
-          <li>Debugged a production parsing failure caused by a response-shape change: captured raw logs, reproduced with a failing test, updated parsing/validation, and kept the regression test in CI.</li>
+          <li>Building the APEX Reporting Engine for FFIO Core Accounting which executes Spectra queries to surface fund accounting data from InvestOne and drive migration to HedgeServ.</li>
+          <li>Migrated EDWAM service logic for WAM/WAL calculations into APEX, consolidating core accounting functionality into the main platform and reducing fragmented service dependencies.</li>
+          <li>Designed reusable HTTP clients modeled after CDPClient and WSOClient to invoke APEX report query APIs, standardizing service-to-service report retrieval across the platform.</li>
+          <li>Working in the Fidelity Funds and Investment Operations department specifically in the Core Accounting team to support data flow validation, API integration, and migration testing for reporting workflows.</li>
         </ul>
       </div>
 
       <div class="item">
         <div class="item-head">
-          <div class="left">UGA Small Satellite Research Laboratory — Data Team Lead</div>
+          <div class="left">UltraRep LLC — Backend Software Engineering Intern (Remote)</div>
+          <div class="right">Jun 2025 – Aug 2025</div>
+        </div>
+        <div class="item-sub">Java • OpenAI • APIs • Redis</div>
+        <ul>
+          <li>Built a REST endpoint that took conversation JSON as input, called the OpenAI API to generate coaching feedback, and returned a structured JSON response that the frontend could render reliably.</li>
+          <li>Added strict response validation (required fields and type checks) and error handling for timeouts and malformed/unexpected response formats so the endpoint didn’t crash on bad upstream output.</li>
+          <li>Wrote JUnit tests that mocked the OpenAI client across success and failure paths (timeout, non-200, missing fields) and asserted the endpoint returns a consistent fallback payload (status=degraded, error_code, retryable, correlated id).</li>
+          <li>Debugged a production parsing failure caused by an OpenAI response shape change: captured the raw response in logs, reproduced it with a failing test, then updated parsing/validation and kept the regression test in CI to prevent repeats.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">University of Georgia Small Satellite Research Laboratory — Data Team Lead</div>
           <div class="right">Sep 2024 – Present</div>
         </div>
         <div class="item-sub">Athens, GA</div>
         <ul>
-          <li>Designed a data pipeline for a 512×512@20FPS microscope payload (onboard filtering → H.265 compression → downlink scheduling) to reduce expected downlink needs by &gt;75% within S-band/X-band limits.</li>
-          <li>Built simulation tools to estimate daily data volume and downlink gaps (~4.6 GB/day), guiding compression settings, frame thinning, and ground station usage.</li>
-          <li>Helped define the technical plan for a National Geographic livestream CubeSat (12U): composite video feed using H.265 at ~6–7 Mbps (720p30) over a 10 Mbps X-band link.</li>
-          <li>Led feasibility analysis for an interactive museum-style experience (1–3s latency, stable Earth pointing, ~60–70W streaming power), supporting up to $2M in potential funding.</li>
+          <li>Designed the data pipeline for a 512×512@20FPS microscope payload (onboard filtering → H.265 compression → downlink scheduling) to reduce expected downlink needs by &gt;75% within S-band/X-band limits.</li>
+          <li>Built simulation tools to estimate daily data volume and downlink gaps (about 4.6 GB/day) and used them to choose compression settings, frame thinning strategies, and ground station usage.</li>
+          <li>Helped define the technical plan for a National Geographic livestream CubeSat, 12U system that captures a visitor’s face, displays it onboard, and streams a composite video feed using H.265 at ~6–7 Mbps (720p30) over a 10 Mbps X-band link.</li>
+          <li>Led early feasibility analysis for a museum-style interactive experience (targeting 1–3s latency, stable Earth pointing, and ~60–70W streaming power), supporting up to $2M in potential funding.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Relevant Projects</div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">UGA + Athens-Clarke County Water Treatment Facility — AI@UGA Software Engineer</div>
+          <div class="right">Apr 2025 – Present</div>
+        </div>
+        <div class="item-sub">Athens, GA • Sensor ML</div>
+        <ul>
+          <li>Built a feature pipeline for dissolved oxygen prediction from multivariate sensor streams, processing &gt;1M readings/day using SQL windowing plus real-time aggregation.</li>
+          <li>Tuned models for low-power edge devices using quantization and pruning to reduce inferencing time on microcontrollers.</li>
+          <li>Added data quality checks and anomaly triggers so predictions stayed stable during sensor noise and missing transmissions.</li>
         </ul>
       </div>
 
@@ -146,40 +175,10 @@
         </div>
         <div class="item-sub">Athens, GA • Python • AutoCAD</div>
         <ul>
-          <li>Built a system that converts 2D blueprints into structured CAD geometry using shape detection, contour tracing, and graph-based region assembly, reducing manual redraw and speeding early design iterations.</li>
-          <li>Created a preprocessing pipeline to clean/normalize noisy drawings (artifact removal, structure inference), improving CAD generation reliability and runtime (days → hours on typical inputs).</li>
+          <li>Built a system that turns 2D blueprints into structured CAD geometry using shape detection, contour tracing, and graph-based region assembly; reducing manual redraw work and speeding up early design iterations.</li>
+          <li>Wrote a preprocessing pipeline to clean and normalize noisy drawings (remove artifacts, infer structure) so CAD generation failed less often and ran faster (from days to hours on typical inputs).</li>
         </ul>
       </div>
-
-      <div class="item">
-        <div class="item-head">
-          <div class="left">UGA + Athens-Clarke County Water Treatment Facility — AI@UGA Software Engineer</div>
-          <div class="right">Apr 2025 – Present</div>
-        </div>
-        <div class="item-sub">Athens, GA • Sensor ML</div>
-        <ul>
-          <li>Built a feature pipeline for dissolved oxygen prediction from multivariate sensor streams, processing &gt;1M readings/day using SQL windowing and real-time aggregation.</li>
-          <li>Tuned models for low-power edge devices with quantization and pruning to reduce inference time on microcontrollers.</li>
-          <li>Added data quality checks and anomaly triggers to stabilize predictions during sensor noise and missing transmissions.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-head">
-          <div class="left">SmartPhoneTrucker LLC — Software Development Intern</div>
-          <div class="right">Aug 2023 – Feb 2024</div>
-        </div>
-        <div class="item-sub">Suwanee, GA • React • JavaScript • HTML/CSS</div>
-        <ul>
-          <li>Stabilized three production React apps by profiling render performance, removing UI-blocking work, and fixing 300+ frontend exceptions.</li>
-          <li>Helped design mobile logistics app structure with modular components and clear domain boundaries to ship features faster with fewer rewrites.</li>
-          <li>Improved load performance by cleaning build/asset pipelines, reducing unnecessary JS and raising Lighthouse scores by 30%+ on slow mobile networks.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="sec-title">Relevant Projects</div>
 
       <div class="grid2">
         <div class="item">
@@ -189,21 +188,21 @@
           </div>
           <div class="item-sub">Python • Pygame • NumPy</div>
           <ul>
-            <li>Engineered a depth-limited Expectimax agent with transposition tables, probabilistic heuristics, and board-state memorization, achieving a 100% win rate.</li>
-            <li>Optimized evaluation bottlenecks to reduce per-move computation and enable real-time gameplay with deep search.</li>
+            <li>Engineered a depth-limited Expectimax search agent with transposition tables, probabilistic evaluation heuristics, and board-state memorization, achieving a 100% win rate.</li>
+            <li>Profiled and optimized state evaluation bottlenecks, reducing per-move computation time and enabling real-time gameplay even with deep search trees.</li>
           </ul>
         </div>
 
         <div class="item">
           <div class="item-head">
             <div class="left">Blackjack Card Counting Trainer</div>
-            <div class="right">Jan 2025</div>
+            <div class="right">Jan 2026</div>
           </div>
           <div class="item-sub">TypeScript • React • Tailwind</div>
           <ul>
-            <li>Built an interactive 4-deck blackjack game (208-card shoe) with splits, doubles, and bankroll tracking for realistic practice.</li>
-            <li>Added Hi/Lo counting (running + true count) and a tutorial mode that checks count and bet sizing after each round.</li>
-            <li>Tracked session stats (accuracy and profit/loss) to measure improvement.</li>
+            <li>Built a fully interactive 4-deck blackjack game (208-card shoe) with realistic dealing, splits, doubles, and bankroll tracking so I can practice real betting decisions.</li>
+            <li>Added Hi/Lo card counting practice with running count, true count (based on decks remaining), and a tutorial mode that checks my count and bet sizing after each round.</li>
+            <li>Tracked session stats like counting accuracy and profit/loss to measure improvement over time.</li>
           </ul>
         </div>
       </div>
@@ -223,7 +222,7 @@
         <span class="pill">Redis</span>
         <span class="pill">Git</span>
         <span class="pill">Docker</span>
-        <span class="pill">scikit-learn</span>
+        <span class="pill">Scikit-learn</span>
         <span class="pill">TensorFlow</span>
         <span class="pill">PyTorch</span>
       </div>
