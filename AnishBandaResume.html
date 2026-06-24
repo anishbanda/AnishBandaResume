@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Resume — Anish Banda" />
+  <title>Anish Banda — Resume</title>
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --rule:#e5e7eb;
+      --accent:#111827;
+      --max: 900px;
+    }
+
+    /* Base */
+    html,body{background:var(--bg); color:var(--text); margin:0; padding:0;}
+    body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+         line-height:1.35; font-size:16px;}
+    a{color:var(--accent); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:32px 20px 56px;}
+    .top{display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:12px;}
+    h1{font-size:34px; margin:0;}
+    .contact{display:flex; flex-wrap:wrap; gap:10px 16px; color:var(--muted); font-size:14px;}
+    .contact span{white-space:nowrap;}
+    .subline{color:var(--muted); font-size:14px; margin-top:6px;}
+
+    /* Sections */
+    section{margin-top:22px;}
+    .sec-title{
+      display:flex; align-items:center; gap:12px;
+      font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+      margin:18px 0 10px;
+      color:var(--muted);
+    }
+    .sec-title::after{content:""; flex:1; height:1px; background:var(--rule);}
+
+    .item{margin:10px 0 14px;}
+    .item-head{
+      display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px;
+      margin-bottom:4px;
+    }
+    .item-head .left{font-weight:600;}
+    .item-head .right{color:var(--muted); font-size:14px; white-space:nowrap;}
+    .item-sub{color:var(--muted); font-size:14px; margin-bottom:6px;}
+    ul{margin:6px 0 0 18px; padding:0;}
+    li{margin:4px 0;}
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
+    .pill{border:1px solid var(--rule); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted);}
+
+    /* Two-column helpers (optional) */
+    .grid2{display:grid; grid-template-columns:1fr; gap:14px;}
+    @media (min-width: 860px){
+      .grid2{grid-template-columns:1fr 1fr;}
+    }
+
+    /* Print */
+    @media print{
+      .wrap{padding:0; margin:0; max-width:none;}
+      a{text-decoration:none;}
+      .sec-title{color:#111;}
+      .sec-title::after{background:#ddd;}
+      body{font-size:12px;}
+      h1{font-size:22px;}
+      .contact{font-size:11px;}
+      .item-head .right, .item-sub, .subline, .pill{font-size:11px;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div>
+        <h1>Anish Banda</h1>
+        <div class="subline">
+          Cumming, GA 30040 • Athens, GA 30605
+        </div>
+      </div>
+
+      <div class="contact" aria-label="Contact information">
+        <span><a href="tel:+14705054338">(470) 505-4338</a></span>
+        <span><a href="mailto:bandaanish@gmail.com">bandaanish@gmail.com</a></span>
+        <span><a href="https://linkedin.com/in/anishbanda" rel="noopener" target="_blank">linkedin.com/in/anishbanda</a></span>
+        <span><a href="https://github.com/anishbanda" rel="noopener" target="_blank">github.com/anishbanda</a></span>
+      </div>
+    </header>
+
+    <section>
+      <div class="sec-title">Education</div>
+      <div class="item">
+        <div class="item-head">
+          <div class="left">The University of Georgia — Athens, GA</div>
+          <div class="right">Aug 2024 – May 2028</div>
+        </div>
+        <ul>
+          <li><strong>Majors:</strong> Computer Science and Mathematics, Area of Emphasis in Artificial Intelligence and Applied Mathematics</li>
+          <li><strong>GPA:</strong> 3.7/4.0</li>
+          <li><strong>Honors:</strong> Hope Scholarship, Charter Scholarship, and Dean’s List</li>
+          <li><strong>Selected Participant:</strong> Goldman Sachs Engineering Possibilities Summit, SIG Discovery Day, and BCG Launch</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Relevant Experience</div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">Fidelity Investments — Software Engineering Intern</div>
+          <div class="right">Jun 2026 – Present</div>
+        </div>
+        <div class="item-sub">Westlake, TX • Java • Spring/Spring Boot • APIs</div>
+        <ul>
+          <li>Working on the Core Accounting team within Fidelity Funds and Investment Operations department, helping validate data flows, integrate APIs, and test reporting workflows as the migration progresses.</li>
+          <li>Building the APEX Reporting Engine which executes Spectra queries to pull fund accounting data from InvestOne and drive migration to HedgeServ.</li>
+          <li>Moved the WAM/WAL calculations logic from EDWAMs into APEX to keep the core accounting functionality in one place.</li>
+          <li>Built HTTP clients modeled after CDPClient and WSOClient that give services a consistent way to call the APEX report APIs and retrieve data from each other.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">UltraRep LLC — Backend Software Engineering Intern (Remote)</div>
+          <div class="right">Jun 2025 – Aug 2025</div>
+        </div>
+        <div class="item-sub">Java • OpenAI • APIs • Redis</div>
+        <ul>
+          <li>Built a REST endpoint that took conversation JSON as input, called the OpenAI API to generate coaching feedback, and returned a structured JSON response that the frontend could render reliably.</li>
+          <li>Added strict response validation (required fields and type checks) and error handling for timeouts and malformed/unexpected response formats so the endpoint didn’t crash on bad upstream output.</li>
+          <li>Wrote JUnit tests that mocked the OpenAI client across success and failure paths (timeout, non-200, missing fields) and asserted the endpoint returns a consistent fallback payload (status=degraded, error_code, retryable, correlated id).</li>
+          <li>Debugged a production parsing failure caused by an OpenAI response shape change: captured the raw response in logs, reproduced it with a failing test, then updated parsing/validation and kept the regression test in CI to prevent repeats.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">University of Georgia Small Satellite Research Laboratory — Data Team Lead</div>
+          <div class="right">Sep 2024 – Present</div>
+        </div>
+        <div class="item-sub">Athens, GA</div>
+        <ul>
+          <li>Designed the data pipeline for a 512×512@20FPS microscope payload (onboard filtering → H.265 compression → downlink scheduling) to reduce expected downlink needs by &gt;75% within S-band/X-band limits.</li>
+          <li>Built simulation tools to estimate daily data volume and downlink gaps (about 4.6 GB/day) and used them to choose compression settings, frame thinning strategies, and ground station usage.</li>
+          <li>Helped define the technical plan for a National Geographic livestream CubeSat, 12U system that captures a visitor’s face, displays it onboard, and streams a composite video feed using H.265 at ~6–7 Mbps (720p30) over a 10 Mbps X-band link.</li>
+          <li>Led early feasibility analysis for a museum-style interactive experience (targeting 1–3s latency, stable Earth pointing, and ~60–70W streaming power), supporting up to $2M in potential funding.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Relevant Projects</div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">R.I.V.E.R. SENSE — AI@UGA Software Engineer</div>
+          <div class="right">Apr 2025 – Present</div>
+        </div>
+        <div class="item-sub">Athens, GA • Sensor ML</div>
+        <ul>
+          <li>	Worked directly with Athens-Clarke County Water Treatment Facility and professors under UGA’s Geography department.</li>
+          <li>Built a feature pipeline for dissolved oxygen prediction from multivariate sensor streams, processing &gt;1M readings/day using SQL windowing plus real-time aggregation.</li>
+          <li>Tuned models for low-power edge devices using quantization and pruning to reduce inferencing time on microcontrollers.</li>
+          <li>Added data quality checks and anomaly triggers so predictions stayed stable during sensor noise and missing transmissions.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <div class="left">Hammerhead Construction — AI@UGA Software Engineer</div>
+          <div class="right">Apr 2025 – Present</div>
+        </div>
+        <div class="item-sub">Athens, GA • Python • AutoCAD</div>
+        <ul>
+          <li>Built a system that turns 2D blueprints into structured CAD geometry using shape detection, contour tracing, and graph-based region assembly; reducing manual redraw work and speeding up early design iterations.</li>
+          <li>Wrote a preprocessing pipeline to clean and normalize noisy drawings (remove artifacts, infer structure) so CAD generation failed less often and ran faster (from days to hours on typical inputs).</li>
+        </ul>
+      </div>
+
+      <div class="grid2">
+        <div class="item">
+          <div class="item-head">
+            <div class="left">2048 AI</div>
+            <div class="right">Feb 2025</div>
+          </div>
+          <div class="item-sub">Python • Pygame • NumPy</div>
+          <ul>
+            <li>Engineered a depth-limited Expectimax search agent with transposition tables, probabilistic evaluation heuristics, and board-state memorization, achieving a 100% win rate.</li>
+            <li>Profiled and optimized state evaluation bottlenecks, reducing per-move computation time and enabling real-time gameplay even with deep search trees.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <div class="left">Blackjack Card Counting Trainer</div>
+            <div class="right">Jan 2026</div>
+          </div>
+          <div class="item-sub">TypeScript • React • Tailwind</div>
+          <ul>
+            <li>Built a fully interactive 4-deck blackjack game (208-card shoe) with realistic dealing, splits, doubles, and bankroll tracking so I can practice real betting decisions.</li>
+            <li>Added Hi/Lo card counting practice with running count, true count (based on decks remaining), and a tutorial mode that checks my count and bet sizing after each round.</li>
+            <li>Tracked session stats like counting accuracy and profit/loss to measure improvement over time.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Skills</div>
+      <div class="pillrow" aria-label="Skills list">
+        <span class="pill">Python</span>
+        <span class="pill">Java</span>
+        <span class="pill">C/C++</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">SQL</span>
+        <span class="pill">React</span>
+        <span class="pill">HTML/CSS</span>
+        <span class="pill">REST APIs</span>
+        <span class="pill">Redis</span>
+        <span class="pill">Git</span>
+        <span class="pill">Docker</span>
+        <span class="pill">Scikit-learn</span>
+        <span class="pill">TensorFlow</span>
+        <span class="pill">PyTorch</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
